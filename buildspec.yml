@@ -1,8 +1,12 @@
 version: 0.2
 phases:
   commands:
-    - echo "Installing dependencies..."
-    - mvn install -DskipTests
+      - echo "Installing Java 21..."
+      - amazon-linux-extras enable corretto21
+      - yum install -y java-21-amazon-corretto-devel
+      - java -version
+      - echo "Installing Maven dependencies..."
+      - mvn install -DskipTests
   build:
     commands:
       - echo Packaging JAR file...
