@@ -1,8 +1,5 @@
 version: 0.2
 phases:
-  install:
-    commands:
-      - java -version
   build:
     commands:
       - echo Packaging JAR file...
